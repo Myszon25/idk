@@ -17,7 +17,7 @@ body{
 }
 
 /* ===================== */
-/*      NAVBAR UPGRADE   */
+/*      NAVBAR           */
 /* ===================== */
 
 .navbar{
@@ -36,11 +36,10 @@ body{
 
     border-bottom:1px solid rgba(255,255,255,0.12);
 
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.6);
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
 }
 
-/* gradient title */
+/* logo */
 .logo{
     font-size:26px;
     font-weight:800;
@@ -52,8 +51,6 @@ body{
     -webkit-text-fill-color:transparent;
 
     animation: move 6s linear infinite;
-
-    letter-spacing:0.5px;
 }
 
 @keyframes move{
@@ -67,7 +64,7 @@ body{
     gap:12px;
 }
 
-/* searchbar */
+/* search */
 #searchBar{
     width:260px;
     padding:10px 14px;
@@ -90,7 +87,7 @@ body{
     box-shadow:0 0 15px rgba(155,123,255,0.35);
 }
 
-/* discord button */
+/* DISCORD */
 .discord{
     display:flex;
     align-items:center;
@@ -115,9 +112,30 @@ body{
     box-shadow:0 0 20px rgba(88,101,242,0.5);
 }
 
-.discord svg{
-    width:20px;
-    height:20px;
+/* NEW BUTTON */
+.theo-btn{
+    padding:10px 14px;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#ff4dff,#7b5cff,#00d4ff);
+    background-size:200%;
+
+    color:white;
+    text-decoration:none;
+
+    font-weight:800;
+    font-size:13px;
+
+    transition:0.25s;
+
+    white-space:nowrap;
+}
+
+.theo-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 25px rgba(123,92,255,0.6);
+    background-position:100%;
 }
 
 /* MOBILE */
@@ -132,18 +150,13 @@ body{
         width:200px;
     }
 
-    #searchBar:focus{
-        width:220px;
-    }
-
     .logo{
         font-size:22px;
-        text-align:center;
     }
 }
 
 /* ===================== */
-/*  RESZTA TWOJEGO KODU  */
+/* RESZTA STRONY         */
 /* ===================== */
 
 .container{
@@ -189,7 +202,6 @@ body{
 .sub{
     font-size:12px;
     opacity:0.8;
-    line-height:1.2;
 }
 
 .chance{
@@ -215,26 +227,6 @@ body{
     color:white;
 }
 
-@media (max-width: 768px){
-    .card{ height:200px; }
-}
-
-@media (max-width: 480px){
-    .card{ height:180px; }
-    .title{ font-size:16px; }
-}
-
-.title,
-.sub,
-.chance,
-.wr{
-    text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
-}
-
 </style>
 </head>
 
@@ -250,11 +242,12 @@ body{
 
         <input type="text" id="searchBar" placeholder="Search level...">
 
+        <!-- NEW BUTTON -->
+        <a class="theo-btn" href="YOUR_LINK_HERE" target="_blank">
+            Theorically Possible
+        </a>
+
         <a class="discord" href="YOUR_DISCORD_LINK" target="_blank">
-            <svg viewBox="0 0 127.14 96.36">
-                <path fill="currentColor"
-                d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83A72.37,72.37,0,0,0,45.64,0A105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21A105.73,105.73,0,0,0,32.71,96.36A77.7,77.7,0,0,0,39.6,85.23A68.42,68.42,0,0,1,28.76,80.05C29.67,79.39,30.56,78.71,31.42,77.99A75.57,75.57,0,0,0,95.71,78C96.58,78.72,97.47,79.4,98.38,80.06A68.68,68.68,0,0,1,87.52,85.25A77,77,0,0,0,94.41,96.37A105.25,105.25,0,0,0,126.58,80.2C129.22,52.84,122.07,29.11,107.7,8.07Z"/>
-            </svg>
             Discord
         </a>
 
